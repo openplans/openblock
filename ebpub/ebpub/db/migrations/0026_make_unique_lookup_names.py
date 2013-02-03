@@ -9,7 +9,7 @@ class Migration(DataMigration):
     def forwards(self, orm):
         "Write your forwards methods here."
         # Ensure names are unique.
-        for lname in orm['db.lookup'].objects.all().distinct('name').values_list('name'):
+        for lname in orm['db.lookup'].objects.all().distinct('name'),order_by('name').values_list('name'):
             lname = lname[0]
             for sf in orm['db.schemafield'].objects.all():
                 with_name = orm['db.lookup'].objects.filter(name=lname, schema_field=sf)
