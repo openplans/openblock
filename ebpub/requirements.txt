@@ -13,7 +13,7 @@ slimmer>=0.1.30
 https://github.com/openplans/olwidget/zipball/20120404#egg=django-olwidget-0.49
 pyRFC3339==0.1
 pytz>=2011n
-PyYAML==3.09
+PyYAML==5.4
 PIL>=1.1.6,<=1.2a
 mock==0.8.0
 South>=0.7.3
